@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMORPG - Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dashstyle.css">
+</head>
+<body>
+
+    <div class="cursor"></div>
+
+    <div class="window">
+        <div class="window-header">
+            <div class="window-title">RealmForge</div>
+            <div class="navbar">
+                <div class="navbar-item" id="announcements">
+                    <img src="pics/announcements.png" alt="Announcements">
+                    Announcements
+                </div>
+                <div class="navbar-item" id="profile">
+                    <img src="pics/albionprofile.png" alt="Profile">
+                    Profile
+                </div>
+                <div class="navbar-item" id="logout">
+                    <img src="pics/logout.png" alt="Logout">
+                    Logout
+                </div>
+            </div>
+
+            <div class="exit-icon" id="exit-icon">
+                <img src="pics/exit.png" alt="Exit">
+            </div>
+        </div>
+
+        <div class="window-body">
+            <div id="announcements-section" class="announcement-container">
+                <h2>Latest Announcements</h2>
+                <div class="announcement-card">
+                    <img src="pics/announcement1.jpg" class="announcement-image" alt="Announcement">
+                    <div class="announcement-content">
+                        <h3 class="announcement-title">New Realm Released</h3>
+                        <p class="announcement-text">The new realm, Shadow's Edge, is now open for exploration. Gather your party and embark on new adventures!</p>
+                    </div>
+                </div>
+                <div class="announcement-card">
+                    <img src="pics/announcement2.jpg" class="announcement-image" alt="Announcement">
+                    <div class="announcement-content">
+                        <h3 class="announcement-title">Winter Festival</h3>
+                        <p class="announcement-text">Join the festivities and earn exclusive rewards! The Winter Festival begins this week!</p>
+                    </div>
+                </div>
+                <div class="announcement-card">
+                    <img src="pics/announcement3.jpg" class="announcement-image" alt="Announcement">
+                    <div class="announcement-content">
+                        <h3 class="announcement-title">Guild Wars Begin</h3>
+                        <p class="announcement-text">Prepare for Guild Wars! Your guilds must defend your territories against rivals in this exciting new event.</p>
+                    </div>
+                </div>
+                <div class="announcement-card">
+                    <img src="pics/announcement4.jpg" class="announcement-image" alt="Announcement">
+                    <div class="announcement-content">
+                        <h3 class="announcement-title">Double XP Weekend</h3>
+                        <p class="announcement-text">Get ready for Double XP Weekend! From Friday to Sunday, all players will earn twice the experience points!</p>
+                    </div>
+                </div>
+                <div class="announcement-card">
+                    <img src="pics/announcement5.jpg" class="announcement-image" alt="Announcement">
+                    <div class="announcement-content">
+                        <h3 class="announcement-title">New Legendary Gear</h3>
+                        <p class="announcement-text">A new set of Legendary Gear is available in the shops. Only the bravest players will be able to acquire these powerful items!</p>
+                    </div>
+                </div>
+                <div class="announcement-card">
+                    <img src="pics/announcement6.jpg" class="announcement-image" alt="Announcement">
+                    <div class="announcement-content">
+                        <h3 class="announcement-title">Server Maintenance</h3>
+                        <p class="announcement-text">Scheduled maintenance will take place this Saturday from 2 AM to 6 AM. Please plan accordingly.</p>
+                    </div>
+                </div>
+                <div class="announcement-card">
+                    <img src="pics/announcement7.jpg" class="announcement-image" alt="Announcement">
+                    <div class="announcement-content">
+                        <h3 class="announcement-title">New Dungeon Unlocked</h3>
+                        <p class="announcement-text">A new dungeon, the Abyss of Souls, has been unlocked. Gather your team and brave its challenges for great rewards!</p>
+                    </div>
+                </div>
+                <div class="announcement-card">
+                    <img src="pics/announcement8.jpg" class="announcement-image" alt="Announcement">
+                    <div class="announcement-content">
+                        <h3 class="announcement-title">Halloween Event</h3>
+                        <p class="announcement-text">The Halloween event is live! Collect special event items and face off against spooky bosses for exclusive loot.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="profile-container" id="profile-section" style="display: none;">
+                <h2 class="profile-title">Player Profile</h2>
+                <div class="profile-card">
+                    <img src="pics/albionprofile1.png" alt="Profile Picture" class="profile-picture">
+                    
+                    <div class="profile-details">
+                        <p><span>Experience:</span> 1520 XP</p>
+                        <p><span>Achievements:</span> <a href="javascript:void(0);" id="achievements-toggle">View Achievements</a></p>
+                        <p><span>Completed Tasks:</span> 20</p>
+                        <p><span>Guild:</span> Shadow Warriors</p>
+                    </div>
+
+                    <div class="ongoing-quest">
+                        <h3>Ongoing Quest</h3>
+                        <p><strong>Quest:</strong> The Lost Artifact</p>
+                        <p><strong>Status:</strong> In Progress</p>
+                        <p><strong>Progress:</strong> 75% Complete</p>
+                        <button class="view-quest-btn" id="view-quest-details-btn">View Quest Details</button>
+                    </div>
+
+                    <div id="quest-details-section" class="quest-details-section">
+                        <h2 class="quest-title">Quest Title</h2>
+                        <div class="quest-details">
+                            <p class="quest-description">This is a description of the quest. It explains the objective and what the player needs to do.</p>
+                            <p class="quest-reward">Reward: <span class="reward-amount">100 Gold</span></p>
+                            <p class="quest-status">Status: <span class="status-completed">In Progress</span></p>
+                        </div>
+                        <div class="quest-actions">
+                            <button class="accept-quest-btn">Accept Quest</button>
+                            <button class="complete-quest-btn">Complete Quest</button>
+                        </div>
+                    </div>
+                    
+
+                    <div id="achievements-section" class="achievements-section" style="display: none; text-decoration: none;">
+                        <h3>All Achievements</h3>
+                        <ul>
+                            <li><span class="achieved">The Explorer</span> - Discover all regions</li>
+                            <li><span class="achieved">Monster Slayer</span> - Defeat 500 enemies</li>
+                            <li><span class="achieved">The Master</span> - Reach level 50</li>
+                            <li><span class="achieved">Realm Traveler</span> - Conquer A Realm</li>
+                            <li><span class="achieved">Hero of Eryndor</span> - Complete All Quests In Eryndor</li>
+                            <li><span class="locked">Master of the Forge</span> - Craft a legendary weapon or piece of armor using the World Forge</li>
+                            <li><span class="achieved">Dungeon Explorer</span> - Complete all dungeons in Eryndor, unlocking their secrets</li>
+                            <li><span class="achieved">Friend of the Factions</span> - Achieve maximum reputation with all factions in the game</li>
+                            <li><span class="achieved">Lorekeeper</span> - Collect every piece of lore scattered across Eryndor</li>
+                            <li><span class="achieved">Unyielding Warrior</span> - Defeat a powerful boss without dying once</li>
+                            <li><span class="locked">Elemental Balance</span> - Master all four elemental forces (fire, water, earth, air)</li>
+                            <li><span class="locked">Defender of the Realms</span> - Successfully defend the capital from a siege</li>
+                            <li><span class="locked">Time Traveler</span> - Unlock hidden quests available during certain world events or seasons</li>
+                            <li><span class="locked">Conqueror of Shadows</span> - Defeat the Shadow King in the Shadow's Edge realm</li>
+                            <li><span class="achieved">World Traveler</span> - Reach all regions of Eryndor</li>
+                            <li><span class="locked">Champion of the Arena</span> - Win 10 consecutive arena matches</li>
+                            <li><span class="locked">Mystic Collector</span> - Collect all mystical artifacts scattered across the land</li>
+                            <li><span class="locked">Undying Spirit</span> - Survive a raid without using any healing potions</li>
+                            <li><span class="achieved">Reaper of Souls</span> - Defeat 1000 enemies</li>
+                            <li><span class="achieved">Master of Diplomacy</span> - Successfully negotiate peace between two warring factions</li>
+                            <li><span class="locked">Grand Architect</span> - Build and upgrade a guild hall to its highest level</li>
+                            <li><span class="locked">Relic Hunter</span> - Discover all ancient relics hidden in dungeons</li>
+                            <li><span class="achieved">Champion of the Elements</span> - Defeat an elemental boss in each of the four realms</li>
+                            <li><span class="locked">Whisperer of the Wilds</span> - Tame all wild beasts in Eryndor</li>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="launch-game-section">
+                <a href="game.html" class="launch-game-btn" id="launch-game-btn" style="text-decoration: none;">Launch Game</a>
+            </div>
+
+
+
+        </div>
+
+        <div class="window-footer">
+            <div class="server-status">
+                <h3>Server Status</h3>
+                <div class="status">
+                    <span class="status-text">Fetching Servers</span>
+                </div>
+                <div class="players">
+                    <span>Players Online: 152</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

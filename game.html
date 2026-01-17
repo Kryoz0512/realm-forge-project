@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RealmForge - MMORPG Menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+
+    <div class="cursor"></div>
+    
+    <audio id="ambient-sound" loop autoplay>
+        <source src="music/ambience.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="sidebar">
+        <div class="menu-header">
+            <div class="menu-title">RealmForge</div>
+        </div>
+        <div class="navbar">
+            <div class="navbar-item" id="home">
+                <img src="pics/home.png" alt="Home">
+                Start
+            </div>
+            <div class="navbar-item" id="marketplace">
+                <img src="pics/marketplace.png" alt="Marketplace">
+                Marketplace
+            </div>
+            <div class="navbar-item" id="profile">
+                <img src="pics/profile.png" alt="Profile">
+                Profile
+            </div>
+            <div class="navbar-item" id="settings">
+                <img src="pics/settings.png" alt="Settings">
+                Settings
+            </div>
+            <div class="navbar-item exit-btn">
+                <img src="pics/exit.png" alt="Exit">
+                Exit
+            </div>
+        </div>
+    </div>
+
+    <div class="content-area">
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

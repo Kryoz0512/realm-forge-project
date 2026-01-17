@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter the Realm</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <img src="pics/dragon2.gif" alt="Flying Dragon" class="flying-dragon">
+    <img src="pics/dragon.gif" alt="Flying Dragon Diagonal" class="flying-dragon-diagonal">
+
+    <div class="login-container">
+        <button id="exitButton" class="exit-btn">
+            <img src="pics/exit.png" alt="Exit" class="exit-icon">
+        </button>
+
+        <div class="logo">Enter the Realm</div>
+        <form action="#">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter your username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <div class="password-container">
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                    <button type="button" id="togglePassword" class="toggle-btn">
+                        <img id="showIcon" src="pics/show.png" alt="Show Password">
+                        <img id="hideIcon" src="pics/hide.png" alt="Hide Password" style="display: none;">
+                    </button>
+                </div>
+            </div>
+            <button type="submit" class="button">Enter the Realm</button>
+        </form>
+
+        <div class="signup-link">
+            <p>Don't have an account? <a href="#">Sign up</a></p>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 Realmforge. All rights reserved.</p>
+        </div>
+
+        <div id="gifContainer" class="gif-container">
+            <img src="pics/loading.gif" alt="Loading GIF" id="loadingGif">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
